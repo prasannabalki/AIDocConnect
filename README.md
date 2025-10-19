@@ -6,7 +6,7 @@
 
 ## 🌍 Overview
 
-An integrated GenAI-powered telemedicine ecosystem that enables:
+An integrated GenAI-powered telemedicine ecosystem that en63ables:
 
 - 🩹 Real-time doctor–patient consultations  
 - 🧾 Automated clinical documentation  
