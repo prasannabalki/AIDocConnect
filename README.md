@@ -2,6 +2,14 @@
 
 **AIDocConnect** is a next-generation **telemedicine platform** that integrates **Generative AI (GenAI)** with **clinical decision support** to bridge the gap between patients, physicians, and health data.
 
+
+<p align="center">
+  <img src="a1.png" width="720" alt="AIDocConnect Logo"/>
+</p>
+
+<h1 align="center">🩺 AIDocConnect</h1>
+<h3 align="center">AI-Powered Telemedicine & Clinical Decision Support Platform</h3>
+
 ---
 
 ## 🌍 Overview
