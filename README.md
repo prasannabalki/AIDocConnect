@@ -15,7 +15,7 @@ An integrated GenAI-powered telemedicine ecosystem that enables:
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture3
 
              ┌──────────────────────────┐
              │       Flutter App        │
@@ -99,60 +99,7 @@ An integrated GenAI-powered telemedicine ecosystem that enables:
 | 6️⃣ | Dashboard + logs + AI explainability | React + Grafana |
 | 7️⃣ | Deployment on Kubernetes (MinIO, PostgreSQL, MongoDB) | Docker + K8s |
 
----
-
-## ☸️ Kubernetes Architecture (Mermaid Diagram)
-
-```mermaid
-flowchart TD
-subgraph Frontend["🧭 Frontend Layer"]
-  R[React.js Web Portal] 
-  F[Flutter App]
-end
-
-subgraph Backend["🟢 Node.js Backend"]
-  API[REST / GraphQL API]
-  AUTH[Keycloak / JWT Auth]
-  WS[WebRTC / Socket.IO]
-  QUEUE[Redis / RabbitMQ]
-end
-
-subgraph AI["🧠 Python AI Microservices"]
-  LLM[LLM Engine<br/>BioGPT / Llama3 / Mistral]
-  ASR[Speech-to-Text<br/>Whisper / Vosk]
-  IMG[Imaging AI<br/>MONAI / BioMedCLIP]
-end
-
-subgraph Data["💾 Data & Storage Layer"]
-  DB[(PostgreSQL)]
-  MDB[(MongoDB)]
-  FS[(MinIO)]
-  LOGS[(Grafana / Loki / Prometheus)]
-end
-
-subgraph K8s["☸️ Kubernetes Cluster"]
-  N1[Node.js Pods]
-  P1[Python AI Pods]
-  D1[Database StatefulSets]
-end
-
-R --> API
-F --> API
-API --> AUTH
-API --> DB
-API --> MDB
-QUEUE --> AI
-AI --> DB
-AI --> MDB
-API --> FS
-AI --> FS
-API --> LOGS
-AI --> LOGS
-
-API -.deployed on.-> N1
-AI -.deployed on.-> P1
-DB -.StatefulSet.-> D1
-MDB -.StatefulSet.-> D1
+------------------------------------------------------------------
 
 🔒 Compliance & Security
 
