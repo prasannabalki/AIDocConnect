@@ -116,23 +116,32 @@ Future Enhancements
 🩻 Edge-AI inference for diagnostic imaging
 
 
+
 aidocconnect/
- ├── frontend/
- │   ├── react-portal/
- │   └── flutter-app/
- ├── backend/
- │   ├── node-api/
- │   └── auth-service/
- ├── ai-services/
- │   ├── llm-engine/
- │   ├── speech-service/
- │   └── imaging-ai/
- ├── database/
- │   ├── postgres/
- │   └── mongodb/
- ├── deployment/
- │   ├── docker/
- │   └── kubernetes/
- └── docs/
-     ├── architecture.md
-     └── roadmap.md
+├── frontend/
+│   ├── react-portal/           # Web portal for doctors & admins (React.js + Next.js)
+│   └── flutter-app/            # Mobile app for patients & doctors (Flutter)
+│
+├── backend/
+│   ├── node-api/               # Node.js backend (Express/NestJS REST & GraphQL APIs)
+│   └── auth-service/           # Keycloak or JWT-based authentication service
+│
+├── ai-services/
+│   ├── llm-engine/             # Generative AI models (BioGPT, Llama3, Mistral)
+│   ├── speech-service/         # Whisper/Vosk ASR + Coqui TTS microservice
+│   └── imaging-ai/             # MONAI/OpenCV image diagnostics microservice
+│
+├── database/
+│   ├── postgres/               # SQL migrations & schema for FHIR, users, encounters
+│   └── mongodb/                # Collections for chat logs, AI responses, metadata
+│
+├── deployment/
+│   ├── docker/                 # Dockerfiles & Compose for local development
+│   └── kubernetes/             # Helm charts / YAMLs for production deployment
+│
+└── docs/
+    ├── architecture.md         # System design, data flow diagrams, and API mapping
+    └── roadmap.md              # Feature roadmap, milestones, and sprint planning
+
+
+
