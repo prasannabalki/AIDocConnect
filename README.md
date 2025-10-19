@@ -116,33 +116,25 @@ Future Enhancements
 🩻 Edge-AI inference for diagnostic imaging
 
 
-
-┌───────────────────────────────────────────────────────────────┐
-│                        🩺 AIDocConnect                         │
-│   Next-Gen Telemedicine + Generative AI Platform Architecture │
-└───────────────────────────────────────────────────────────────┘
-         │
-         ├───📂 frontend/
-         │     ├── react-portal/     → Web portal for doctors & admins (React.js + Next.js)
-         │     └── flutter-app/      → Mobile app for patients & doctors (Flutter)
-         │
-         ├───📂 backend/
-         │     ├── node-api/         → Node.js backend (Express/NestJS REST & GraphQL APIs)
-         │     └── auth-service/     → Keycloak or JWT-based authentication service
-         │
-         ├───📂 ai-services/
-         │     ├── llm-engine/       → Generative AI models (BioGPT, Llama3, Mistral)
-         │     ├── speech-service/   → Whisper/Vosk ASR + Coqui TTS microservice
-         │     └── imaging-ai/       → MONAI/OpenCV image diagnostics microservice
-         │
-         ├───📂 database/
-         │     ├── postgres/         → SQL schema & migrations (FHIR, users, encounters)
-         │     └── mongodb/          → NoSQL collections (chat logs, AI responses)
-         │
-         ├───📂 deployment/
-         │     ├── docker/           → Dockerfiles & Compose setup for local development
-         │     └── kubernetes/       → Helm charts & YAMLs for scalable production deployment
-         │
-         └───📂 docs/
-               ├── architecture.md   → System design, API flow, and component diagrams
-               └── roadmap.md        → Feature roadmap, milestones, and sprint planning
+| **Folder / File**        | **Description**                                                        |
+| ------------------------ | ---------------------------------------------------------------------- |
+| **`aidocconnect/`**      | 🩺 *Root directory for the AIDocConnect Telemedicine + GenAI platform* |
+| ├── **`frontend/`**      | Contains all client-facing interfaces (web + mobile)                   |
+| │ ├── `react-portal/`    | Web portal for doctors & admins (React.js + Next.js)                   |
+| │ └── `flutter-app/`     | Mobile app for patients & doctors (Flutter)                            |
+| ├── **`backend/`**       | Core backend microservices                                             |
+| │ ├── `node-api/`        | Node.js backend (Express/NestJS REST & GraphQL APIs)                   |
+| │ └── `auth-service/`    | Authentication service (Keycloak / JWT)                                |
+| ├── **`ai-services/`**   | All AI-related microservices and model APIs                            |
+| │ ├── `llm-engine/`      | Generative AI models (BioGPT, Llama3, Mistral)                         |
+| │ ├── `speech-service/`  | Speech AI (Whisper/Vosk ASR + Coqui TTS)                               |
+| │ └── `imaging-ai/`      | Imaging AI (MONAI / OpenCV diagnostics)                                |
+| ├── **`database/`**      | Databases and schema definitions                                       |
+| │ ├── `postgres/`        | SQL schema, migrations, and FHIR data models                           |
+| │ └── `mongodb/`         | NoSQL collections (chat logs, AI responses, metadata)                  |
+| ├── **`deployment/`**    | Deployment automation and environment setup                            |
+| │ ├── `docker/`          | Dockerfiles & Compose for local development                            |
+| │ └── `kubernetes/`      | Helm charts / YAMLs for production deployment on K8s                   |
+| └── **`docs/`**          | Project documentation and planning                                     |
+|    ├── `architecture.md` | System design, diagrams, and API mappings                              |
+|    └── `roadmap.md`      | Feature roadmap, milestones, and sprint planning                       |
